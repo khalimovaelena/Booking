@@ -41,6 +41,7 @@ public class BookingsController : ControllerBase
             }
 
             IList<RoomBooking> bookings = await customer.BookingService.GetBookings(startTime, endTime);
+            _logger.LogInformation($"Used service {customer.BookingService.ServiceName} to GET bookings for customer with ID = {customerID}");
             return Ok(bookings);
         }
         catch (Exception ex)
