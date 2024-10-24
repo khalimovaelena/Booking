@@ -15,6 +15,7 @@ namespace Booking.Services
 
         public string ServiceName => "GOOGLE Booking Service";
 
+        //TODO: book room in GOOGLE
         public Task CreateBooking(RoomBooking booking)
         {
             throw new NotImplementedException();
